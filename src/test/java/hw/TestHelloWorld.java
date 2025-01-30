@@ -40,13 +40,14 @@ public class TestHelloWorld {
 
   @Test
   public void getMessageInList() { // this test is broken - fix it!
-    var list = Arrays.asList(fixture);
+    var list = Arrays.asList(fixture, new HelloWorld()); // add extra parameter after fixture
     assertEquals("hello world", list.get(1).getMessage());
+    //list.get(int index)
   }
 
   @Test
   public void getYearInList() { // this test is broken - fix it!
-    var list = Arrays.asList(fixture);
+    var list = Arrays.asList(fixture, new HelloWorld()); // add extra parameter after fixture
     assertEquals(2025, list.get(1).getYear());
   }
 }
